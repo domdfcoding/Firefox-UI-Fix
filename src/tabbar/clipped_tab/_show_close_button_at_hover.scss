@@ -11,7 +11,8 @@
   visibility: collapse !important;
   opacity: 0;
 }
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:hover .tab-close-button {
+/* Added `:has([visuallyselected])` to hide close buttons on background tabs to prevent false clicks. */
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:has([visuallyselected]):hover .tab-close-button {
   visibility: visible !important;
   opacity: 1;
 }
